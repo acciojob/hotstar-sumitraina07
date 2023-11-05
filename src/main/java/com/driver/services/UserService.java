@@ -57,6 +57,13 @@ public class UserService {
             }
         }
 
+        if(subscriptionType.equals(SubscriptionType.BASIC)){
+            return countOfBasicWeb;
+        }else if(subscriptionType.equals(SubscriptionType.PRO)){
+            return countOfBasicWeb+countOfProWeb;
+        }else{
+            return countOfBasicWeb+countOfProWeb+countOfEliteWeb;
+        }
 
     }
 
